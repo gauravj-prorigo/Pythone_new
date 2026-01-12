@@ -1,0 +1,3 @@
+python_is_fun
+ai_is_amazing
+ok
