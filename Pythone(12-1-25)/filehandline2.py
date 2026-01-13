@@ -5,8 +5,7 @@ print(text)
     
 data = []
 for line in text:
-     line = line.lower()    
-     line = line.replace(" ", "_")    
+     line = line.replace(" ", "_").lower()   
      data.append(line)                
 
 

@@ -1,3 +1,4 @@
+
 def add(a,b):
     print("The addition is :",a+b)
 def sub(a,b):
@@ -6,6 +7,7 @@ def multi(a,b):
     print("The multiplication is :",a*b)
 def div(a,b):
     print("The division is :",a/b)  
+    
  
 print("Hello from Arithimatic.py")
 print("Enter the two values")
