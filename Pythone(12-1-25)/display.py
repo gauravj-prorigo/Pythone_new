@@ -7,5 +7,5 @@ class Book:
     def display(self):
         print(f"Name of the book is {self.name} and author of the book is \n{self.author} and publish in {self.data}")
         
-b1 = Book("Gaurav","Gaurav",1927)
+b1 = Book("Gaurav","Saurav",1927)
 b1.display()
