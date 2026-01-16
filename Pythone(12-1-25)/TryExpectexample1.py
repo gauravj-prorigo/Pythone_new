@@ -6,7 +6,7 @@ class baseclass:
     def add(self):
         try:
             ans = self.a/self.b
-            print(f"addition is {ans}") 
+            print(f"answer is {ans}") 
         
         except ZeroDivisionError as e:
                print(e)     
@@ -14,5 +14,5 @@ class baseclass:
       
 
 
-val = baseclass(10,0)
+val = baseclass(10,2)
 val.add() 
