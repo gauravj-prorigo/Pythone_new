@@ -1,43 +1,44 @@
 from abc import ABC,abstractmethod
+
 class product:
     def __init__(self,proname,price):
         self.proname = proname
         self.price = price
         
 class Cart():
-    items = []  
-    sum = 0
+
+    def __init__(self):
+        self.items = []
+
     def add(self,product):
         pass
-        Cart.items.append({"ProductName":product.proname,"ProductPrice":product.price})
+        self.items.append({"ProductName":product.proname,"ProductPrice":product.price})
              
     def calculate(self):
-        for x in Cart.items:
-            Cart.sum  += x["ProductPrice"]
-        return Cart.sum    
+        total = 0
+        for x in self.items:
+            total  += x["ProductPrice"]
+        return total    
             
 
 class Invoice:
     def __init__(self,cart):
-         print("Invoice of", cart.sum)
+         print("Invoice of", cart.calculate())
 
 class SaveDB(ABC):     
     @abstractmethod
     def saveDB(self,c):
         pass     
          
-class SqlDB(SaveDB):
-             
+class SqlDB(SaveDB):      
      def saveDB(self,c):
         print("Save into sql DB",c.items)
         
-class mongoDB(SaveDB):
-             
+class mongoDB(SaveDB):          
      def saveDB(self,c):
         print("Save into Mongo DB",c.items)
         
-class oracalDB(SaveDB):
-             
+class oracalDB(SaveDB):         
      def saveDB(self,c):
         print("Save into oracal DB",c.items)                
 
