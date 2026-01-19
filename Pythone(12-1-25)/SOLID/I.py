@@ -1,15 +1,16 @@
 from abc import ABC ,abstractmethod
 
-class onlinepayment(ABC):
-    @abstractmethod
-    def refund(self):
-         pass
 class payment(ABC):
     @abstractmethod
     def pay(self):
         pass
-    
-class onlinepay(payment,onlinepayment):
+      
+class onlinepayment(payment,ABC):
+    @abstractmethod
+    def refund(self):
+         pass   
+     
+class onlinepay(onlinepayment):
     def pay(self):
         print("online payment")
 

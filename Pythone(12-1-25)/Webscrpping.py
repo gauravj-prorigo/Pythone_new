@@ -6,7 +6,6 @@ response = requests.get("https://quotes.toscrape.com/")
 soup = BeautifulSoup(response.text,"html.parser")
 result = soup.find_all('span', class_='text')
 heading = soup.find('a')
-print(heading)
 
 with open('D:\pythone\Pythone(12-1-25)\output3.txt','w',encoding='utf-8') as f:
        f.write(heading.text + "\n")

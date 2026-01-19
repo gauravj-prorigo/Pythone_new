@@ -1,22 +1,56 @@
-class payment:
-    def refund(self):
-        print("Refund is availble")
+# class Bird:
+#     def fly(self):
+#         print("All birds can fly")
+        
+#     def eat(self):
+#         print("Bird eat ")    
+        
+# class sparrow(Bird):
+#     def fly(self):
+#         print("sparrow can fly but not much high") 
+        
+# class penguin(Bird):
+#     def fly(self):
+#         print("can't fly")        
+        
+# class App():
+#     def __init__(self,feature):
+#         self.feature =  feature
+#         pass                  
+    
 
-class onlinepay(payment):
-    def refund(self):
-        print("Online pay also accepts refund policy")            
+# A = App(sparrow()) 
+# A.feature.eat()
+# A.feature.fly()   
 
-class Cash(payment):
-    def refund(self):
-        raise Exception("Not Avalible") 
+# A1 = App(penguin())
+# A1.feature.fly()
 
 
-class PaymentService:
-    def __init__(self, payment_type):
-        self.pay = payment_type
 
-on = PaymentService(onlinepay())
-ca = PaymentService(Cash())
+class Bird:
+    def eat(self):
+        print("Bird eat ") 
+        
+class Flyingbird(Bird):
+         def fly(self):
+            print("All birds can fly")      
+        
+class sparrow(Flyingbird):
+    def fly(self):
+        print("sparrow can fly but not much high") 
 
-on.pay.refund()
-ca.pay.refund()  
+        
+class penguin(Bird):
+    def swim(self):
+        print("penguin can swim")        
+   
+        
+class App():
+    def __init__(self,feature):
+        self.feature =  feature
+        pass                  
+    
+
+A = App(sparrow()) 
+A.feature.eat()  
